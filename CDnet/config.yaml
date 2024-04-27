@@ -1,0 +1,1494 @@
+Pubmed:
+  GCN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+    a: 0.9
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.03
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+      alpha: 0.10
+      k: 64
+      eps:
+  GAT:
+    test: True
+    use_lcc: True
+    num_development: 1500
+    a: 0.9
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.06
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.08
+      alpha: 0.10
+      k:
+      eps: 0.0005
+  GraphSAGE:
+    test: True
+    use_lcc: True
+    num_development: 1500
+    a: 0.9
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.06
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.1
+      alpha: 0.10
+      k:
+      eps: 0.0005
+  SNGNN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+    a: 0.9
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.06
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.1
+      alpha: 0.10
+      k:
+      eps: 0.0005
+  MLP:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  LINKX:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  GLOGNN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+
+
+
+Citeseer:
+  GCN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+    a: 0.9
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 10.0
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 10.0
+      alpha: 0.10
+      k:
+      eps: 0.0009
+  GAT:
+    test: True
+    use_lcc: True
+    num_development: 1500
+    a: 0.9
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.06
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.1
+      alpha: 0.10
+      k:
+      eps: 0.0005
+  GraphSAGE:
+    test: True
+    use_lcc: True
+    num_development: 1500
+    a: 0.9
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.06
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.1
+      alpha: 0.10
+      k:
+      eps: 0.0005
+  SNGNN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+    a: 0.9
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.06
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.1
+      alpha: 0.10
+      k:
+      eps: 0.0005
+  MLP:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  LINKX:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  GLOGNN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+
+
+
+
+Cora:
+  GCN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  MLP:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  GAT:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.08
+      alpha: 0.1
+      k:
+      eps: 0.005
+  GraphSAGE:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.08
+      alpha: 0.1
+      k:
+      eps: 0.005
+  SNGNN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.08
+      alpha: 0.1
+      k:
+      eps: 0.005
+  LINKX:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  GLOGNN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+
+
+Photo:
+  GCN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+     hidden_layers: 1
+     hidden_units: 64
+     lr: 0.01
+     dropout: 0.5
+     weight_decay: 0.03
+
+    ppr:
+     hidden_layers: 1
+     hidden_units: 64
+     lr: 0.01
+     dropout: 0.5
+     weight_decay: 0.03
+     alpha: 0.15
+     k: 64
+     eps:
+  GAT:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.03
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.07
+      alpha: 0.1
+      k:
+      eps: 0.0005
+  GraphSAGE:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.03
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.07
+      alpha: 0.1
+      k:
+      eps: 0.0005
+  SNGNN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.03
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.07
+      alpha: 0.1
+      k:
+      eps: 0.0005
+  MLP:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  LINKX:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+  GLOGNN:
+    test: True
+    use_lcc: True
+    num_development: 1500
+
+    none:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.05931537406301254
+    ppr:
+      hidden_layers: 1
+      hidden_units: 64
+      lr: 0.01
+      dropout: 0.5
+      weight_decay: 0.09604826107599472
+      alpha: 0.05
+      k: 128
+      eps:
+
+cornell:
+    GCN:
+        test: True
+        use_lcc: False
+        num_development: 0.6
+
+        none:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.0005
+
+        ppr:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.09604826107599472
+         alpha: 0.05
+         k: 64
+         eps:
+    GAT:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    GraphSAGE:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    SNGNN:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    MLP:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.05931537406301254
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    LINKX:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    GLOGNN:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+
+
+wisconsin:
+    GCN:
+        test: True
+        use_lcc: False
+        num_development: 0.6
+
+        none:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.0005
+
+        ppr:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.09604826107599472
+         alpha: 0.05
+         k: 64
+         eps:
+    GAT:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    GraphSAGE:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    SNGNN:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    MLP:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    LINKX:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    GLOGNN:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+
+texas:
+    GCN:
+        test: True
+        use_lcc: False
+        num_development: 0.6
+
+        none:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.0005
+
+        ppr:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.09604826107599472
+         alpha: 0.05
+         k: 64
+         eps:
+    GAT:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    SNGNN:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    GraphSAGE:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    MLP:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    LINKX:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    GLOGNN:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+
+
+actor:
+    GCN:
+        test: True
+        use_lcc: False
+        num_development: 0.6
+
+        none:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.0005
+
+        ppr:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.09604826107599472
+         alpha: 0.05
+         k: 64
+         eps:
+    GAT:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    SNGNN:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    GraphSAGE:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    MLP:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    LINKX:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    GLOGNN:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+
+squirrel:
+    GCN:
+        test: True
+        use_lcc: False
+        num_development: 0.6
+
+        none:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.0005
+
+        ppr:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.09604826107599472
+         alpha: 0.05
+         k: 64
+         eps:
+    GAT:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    SNGNN:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    GraphSAGE:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    MLP:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    LINKX:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    GLOGNN:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+
+chameleon:
+    GCN:
+        test: True
+        use_lcc: False
+        num_development: 0.6
+
+        none:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.0005
+
+        ppr:
+         hidden_layers: 1
+         hidden_units: 64
+         lr: 0.01
+         dropout: 0.5
+         weight_decay: 0.09604826107599472
+         alpha: 0.05
+         k: 64
+         eps:
+    GAT:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    SNGNN:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    GraphSAGE:
+      test: True
+      use_lcc: True
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.07
+        alpha: 0.1
+        k:
+        eps: 0.0005
+    MLP:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    LINKX:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.0005
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
+    GLOGNN:
+      test: True
+      use_lcc: False
+      num_development: 0.6
+
+      none:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.005
+
+      ppr:
+        hidden_layers: 1
+        hidden_units: 64
+        lr: 0.01
+        dropout: 0.5
+        weight_decay: 0.09604826107599472
+        alpha: 0.05
+        k: 64
+        eps:
