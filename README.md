@@ -1,6 +1,12 @@
 # CDnet
 ## Introduction
-In the data-driven era, graph data is widely distributed in multiple fields, and its complex network relationships pose higher challenges to data analysis models. Although graph neural networks (GNNs) perform well in processing non-Euclidean spatial data, traditional methods are usually limited to capturing local information through message passing or relying on graph diffusion to obtain global information. This single perspective makes it difficult to achieve a balance between global and local information, especially in heterogeneous graphs, which can easily lead to information loss or over-smoothing. To this end, we propose Constrained Diffusion Graph Neural Networks (CDnet), which optimizes the graph diffusion range by adding dual constraints: Constrained Diffusion (CD) and Feature Information Flow Routing (FIFR). The CD module reduces the diffusion depth by adaptively reducing the number of diffusion steps, efficiently captures global information and reduces invalid propagation. The FIFR mechanism dynamically regulates the direction and strength of information flow between nodes to ensure precise control of information transmission and retention of local features. Extensive experimental results on public homogeneous and heterogeneous datasets show that CDnet outperforms state-of-the-art methods, demonstrating its excellent generalization and robustness in complex graph analysis.
+We propose Constrained Diffusion Graph Neural Networks (CDnet), which optimizes the graph diffusion range by adding dual constraints: Constrained Diffusion (CD) and Feature Information Flow Routing (FIFR). 
+
+**The CD module**: reduces the diffusion depth by adaptively reducing the number of diffusion steps, efficiently captures global information and reduces invalid propagation. 
+
+**The FIFR mechanism**: dynamically regulates the direction and strength of information flow between nodes to ensure precise control of information transmission and retention of local features. 
+
+Extensive experimental results on public homogeneous and heterogeneous datasets show that CDnet outperforms state-of-the-art methods, demonstrating its excellent generalization and robustness in complex graph analysis.
 
 <img width="1837" alt="image" src="https://github.com/user-attachments/assets/ee42af39-a544-4288-ba2e-7991aecef42f">
 
