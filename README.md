@@ -1,4 +1,5 @@
-# CDnet
+# CDnet: Constrained Diffusion Graph Neural Networks under Feature Information Flow Routing for Node Classification
+
 We propose Constrained Diffusion Graph Neural Networks (CDnet), which optimizes the graph diffusion range by adding dual constraints: Constrained Diffusion (CD) and Feature Information Flow Routing (FIFR). 
 
 **The CD module**: reduces the diffusion depth by adaptively reducing the number of diffusion steps, efficiently captures global information and reduces invalid propagation. 
