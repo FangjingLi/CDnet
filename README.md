@@ -1,4 +1,5 @@
 # CDGConv
+<img width="995" alt="image" src="https://github.com/user-attachments/assets/e6fa6ec0-f063-4f69-8825-c02fcd3603e9" />
 
 ## Installation
 
