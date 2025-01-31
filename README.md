@@ -1,16 +1,5 @@
-# CGDConv: Constrained Graph Diffusion Convolution under Feature Information Flow Routing
+# CDGConv
 
-We propose Constrained Diffusion Graph Neural Networks (CDnet), which optimizes the graph diffusion range by adding dual constraints: Constrained Diffusion (CD) and Feature Information Flow Routing (FIFR). 
-
-**The CD module**: reduces the diffusion depth by adaptively reducing the number of diffusion steps, efficiently captures global information and reduces invalid propagation. 
-
-**The FIFR mechanism**: dynamically regulates the direction and strength of information flow between nodes to ensure precise control of information transmission and retention of local features. 
-
-Extensive experimental results on public homogeneous and heterogeneous datasets show that CDnet outperforms state-of-the-art methods, demonstrating its excellent generalization and robustness in complex graph analysis.
-
-<img width="1837" alt="image" src="https://github.com/user-attachments/assets/ee42af39-a544-4288-ba2e-7991aecef42f">
-
-**Figure 1:** The overall framework of CDnet.
 ## Installation
 
 The requirement.txt included all the dependencies. lt main depends on:
@@ -37,9 +26,9 @@ https://pytorch.org/
 
 ## Run the code
 
-To train and evaluate CDnet for node classification with the command line:
+To train and evaluate CGDConv for node classification with the command line:
 
 ```python
-python CDnet.py --dataset_name Cora --a 0.97 --max_epochs 10000 --process_feature cos --architecture GCN --K0_mul 0.5
+python CGDC.py --dataset_name Cora --a 0.97 --max_epochs 10000 --process_feature cos --architecture GCN --K0_mul 0.5
 ```
 

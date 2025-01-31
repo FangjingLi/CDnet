@@ -34,8 +34,8 @@ def get_dataset(name: str, use_lcc: bool = True) -> InMemoryDataset:
     path = DATA_PATH
     # path = os.path.join(DATA_PATH, name)
     if name in ['Cora', 'Citeseer', 'Pubmed']:
-        # dataset = Planetoid("D:/PostgraduateCode/data/", name)
-        dataset = Planetoid("/root/autodl-fs/GraphDatasets/Homogeneous/", name)
+        dataset = Planetoid("D:/PostgraduateCode/data/", name)
+        # dataset = Planetoid("/root/autodl-fs/GraphDatasets/Homogeneous/", name)
     elif name =='Photo':
         # dataset = Amazon("D:/PostgraduateCode/data/pyg/Amazon", "photo")
         dataset = Amazon("/root/autodl-fs/GraphDatasets/Homogeneous/Amazon", "photo")
@@ -45,7 +45,7 @@ def get_dataset(name: str, use_lcc: bool = True) -> InMemoryDataset:
         dataset = Coauthor("/root/autodl-fs/GraphDatasets/Homogeneous/coauther", 'cs')
     elif name in ['cornell', 'texas', 'wisconsin', 'washington']:
         # dataset = WebKB("/root/autodl-fs/GraphDatasets/Homogeneous/webkb", name)
-        dataset = WebKB(root='D:/PostgraduateCode/data/pyg/webkb',name=name)
+        dataset = WebKB(root='D:/PostgraduateCode/data/webkb',name=name)
     elif name =='actor':
         # dataset = Actor(root='D:/PostgraduateCode/data/pyg/actor')
         dataset = Actor("/root/autodl-fs/GraphDatasets/Homogeneous/actor")
@@ -57,8 +57,8 @@ def get_dataset(name: str, use_lcc: bool = True) -> InMemoryDataset:
         raise Exception('Unknown dataset.')
 
     if use_lcc:
-        # 目的是将数据集限制在最大连通分量内，以简化或改进后续的分析或训练任务。
-        # 这在图数据处理中是常见的操作，特别是当图非常大且包含多个子图时，关注最大连通分量通常更为合理
+        # The goal is to limit the data set to the maximum connected component to simplify or improve subsequent analysis or training tasks.
+        # This is a common operation in graph data processing, especially when the graph is very large and contains multiple subgraphs, it is often more reasonable to focus on the maximum connected component
         lcc = get_largest_connected_component(dataset)
 
         x_new = dataset.data.x[lcc]
@@ -122,7 +122,7 @@ def remap_edges(edges: list, mapper: dict) -> list:
     return [row, col]
 
 
-# 获得邻接矩阵
+# Obtain the adjacency matrix
 def get_adj_matrix(dataset: InMemoryDataset) -> np.ndarray:
     num_nodes = dataset.data.x.shape[0]
     adj_matrix = np.zeros(shape=(num_nodes, num_nodes))
@@ -138,24 +138,28 @@ def get_adj_matrix1(dataset: InMemoryDataset) -> np.ndarray:
         adj_matrix[j, i] = 1.
     return adj_matrix
 
-# 计算基于Personalized PageRank（PPR）的转移矩阵
+# Calculate the transition matrix based on Personalized PageRank (PPR)
 def get_ppr_matrix(
         adj_matrix: np.ndarray,
         alpha: float = 0.1) -> np.ndarray:
     num_nodes = adj_matrix.shape[0]
-    A_tilde = adj_matrix + np.eye(num_nodes)  # 新的矩阵 A_tilde，它是原始邻接矩阵 adj_matrix 与单位矩阵的和 这一步添加了自环（self-loop）到图中
-    D_tilde = np.diag(1 / np.sqrt(A_tilde.sum(axis=1)))  # 计算度矩阵 D_tilde，其中对角线元素是每个节点的度的倒数的平方根（-1/2次方）
-    H = D_tilde @ A_tilde @ D_tilde  # 计算标准化的Laplacian矩阵H，也就是T_sym
-    return alpha * np.linalg.inv(np.eye(num_nodes) - (1 - alpha) * H)  # 扩散矩阵，
+    # The new matrix A_tilde, which is the sum of the original adjacency matrix adj_matrix with the identity matrix This step adds the self-loop to the graph
+    A_tilde = adj_matrix + np.eye(num_nodes)
+    # Calculate the degree matrix D_tilde, where the diagonal element is the square root of the reciprocal degree of each node (-1/2 power)
+    D_tilde = np.diag(1 / np.sqrt(A_tilde.sum(axis=1)))
+    H = D_tilde @ A_tilde @ D_tilde  # Calculate the standardized Laplacian matrix H, which is T_sym
+    return alpha * np.linalg.inv(np.eye(num_nodes) - (1 - alpha) * H)  # Diffusion matrix
 
 def get_k(adj_matrix,K0_mul):
     num_nodes = adj_matrix.shape[0]
-    # A=adj_matrix+ np.eye(num_nodes) #邻接矩阵
-    # D = np.diag(1 / A.sum(axis=1)) #度矩阵
+    # A=adj_matrix+ np.eye(num_nodes) #Adjacency matrix
+    # D = np.diag(1 / A.sum(axis=1)) #Metric matrix
     # T_rw= A @ D
-    A_tilde = adj_matrix + np.eye(num_nodes)  # 新的矩阵 A_tilde，它是原始邻接矩阵 adj_matrix 与单位矩阵的和 这一步添加了自环（self-loop）到图中
-    D_tilde = np.diag(1 / np.sqrt(A_tilde.sum(axis=1)))  # 计算度矩阵 D_tilde，其中对角线元素是每个节点的度的倒数的平方根（-1/2次方）
-    T = D_tilde @ A_tilde @ D_tilde  # 计算标准化的Laplacian矩阵H，也就是T_sym
+    # The new matrix A_tilde, which is the sum of the original adjacency matrix adj_matrix and the identity matrix This step adds the self-loop to the graph
+    A_tilde = adj_matrix + np.eye(num_nodes)
+    # Calculate the degree matrix D_tilde, where the diagonal element is the square root of the reciprocal degree of each node (-1/2 power)
+    D_tilde = np.diag(1 / np.sqrt(A_tilde.sum(axis=1)))
+    T = D_tilde @ A_tilde @ D_tilde  # Calculate the standardized Laplacian matrix H, which is T_sym
     k=1
     T_k=np.linalg.matrix_power(T, k)
     NNZ_k =np.count_nonzero(T_k)
@@ -169,7 +173,7 @@ def get_k(adj_matrix,K0_mul):
             break
     K0=k
     e=math.ceil(K0/K0_mul)
-    # e = math.ceil(K0 + 7)
+    #e = math.ceil(K0 + 7)
     return e
 
 
@@ -190,8 +194,9 @@ def get_heat_matrix(
 def get_top_k_matrix(A: np.ndarray, k: int = 128) -> np.ndarray:
     num_nodes = A.shape[0]
     row_idx = np.arange(num_nodes)
-    A[A.argsort(axis=0)[:num_nodes - k], row_idx] = 0.  # 将邻接矩阵中不在前 k 个索引中的位置的值设为 0。这一步的目的是去除不保留的边，将它们的权重设为 0
-    # 归一化
+    # Set the value of the adjacency matrix not in the first k indexes to 0. The purpose of this step is to remove the edges that are not retained and set their weight to 0
+    A[A.argsort(axis=0)[:num_nodes - k], row_idx] = 0.
+    # normalization
     norm = A.sum(axis=0)
     norm[norm <= 0] = 1  # avoid dividing by zero
     return A / norm
@@ -214,7 +219,7 @@ def set_train_val_test_split(
     rnd_state = np.random.RandomState(development_seed)
     num_nodes = data.y.shape[0]
     if num_development>1:
-        print("同构图数据集split")
+        print("Homogeneous dataset split")
         development_idx = rnd_state.choice(num_nodes, num_development, replace=False)
         test_idx = [i for i in np.arange(num_nodes) if i not in development_idx]
 
@@ -226,17 +231,17 @@ def set_train_val_test_split(
 
         val_idx = [i for i in development_idx if i not in train_idx]
     else:
-        print("异构图数据集split")
+        print("Heterogeneous graph dataset split")
         development_idx = np.array([i for i in np.arange(num_nodes)])
         train_idx = []
         val_idx=[]
         rnd_state = np.random.RandomState(seed)
         for c in range(data.y.max() + 1):
             class_idx = development_idx[np.where(data.y[development_idx].cpu() == c)[0]]
-            train_idx.extend(rnd_state.choice(class_idx, int(len(class_idx)*num_development), replace=False)) #每类60%训练
+            train_idx.extend(rnd_state.choice(class_idx, int(len(class_idx)*num_development), replace=False)) #60% training per class
             val_test_idx = [i for i in class_idx if i not in train_idx]
-            val_idx.extend(rnd_state.choice(val_test_idx, int(len(val_test_idx) * 0.5), replace=False))  # 每类20%训练
-        test_idx = [i for i in development_idx if i not in train_idx and i not in val_idx]#余下测试集
+            val_idx.extend(rnd_state.choice(val_test_idx, int(len(val_test_idx) * 0.5), replace=False))  # 20% training for each class
+        test_idx = [i for i in development_idx if i not in train_idx and i not in val_idx]#Remaining test set
     def get_mask(idx):
         mask = torch.zeros(num_nodes, dtype=torch.bool)
         mask[idx] = 1
@@ -249,14 +254,14 @@ def set_train_val_test_split(
     return data
 
 def analyze_weak(x, edge_index):
-    x_np = x.numpy()  # 将 Tensor 转换为 NumPy 数组
-    # content_df = pd.DataFrame(x_np, columns=['feature_' + str(i) for i in range(x_np.shape[1])])  # 创建 DataFrame
+    x_np = x.numpy()  # Convert Tensor to a NumPy array
+    # content_df = pd.DataFrame(x_np, columns=['feature_' + str(i) for i in range(x_np.shape[1])])  # Create a DataFrame
     content_df = pd.DataFrame(x.numpy(), index=np.arange(x.shape[0]),
                               columns=['feature_' + str(i) for i in range(x.shape[1])])
-    content_df.index.name = 'paper_id'  # 将行索引列重命名为 'paper_id'
+    content_df.index.name = 'paper_id'  # Rename the row index column to 'paper_id'
 
-    edge_index_np = edge_index.numpy()  # 将 Tensor 转换为 NumPy 数组
-    cites_df = pd.DataFrame({'cited_paper_id': edge_index_np[0], 'citing_paper_id': edge_index_np[1]})  # 创建 DataFrame
+    edge_index_np = edge_index.numpy()  # Convert Tensor to a NumPy array
+    cites_df = pd.DataFrame({'cited_paper_id': edge_index_np[0], 'citing_paper_id': edge_index_np[1]})  # Create a DataFrame
 
     # Calculate total nodes
     total_nodes = len(content_df)
@@ -298,9 +303,9 @@ def delete_files_without_hamming(directory):
             if "hamming" not in file_name and "cos" not in file_name:
                 file_path = os.path.join(directory, file_name)
                 os.remove(file_path)
-        print(f"文件夹 {directory} 中文件名不含 'hamming'或'cos' 的文件已成功删除")
+        print(f"Files in folder {directory} that do not contain 'hamming' or 'cos' have been successfully deleted")
     else:
-        print(f"文件夹 {directory} 不存在")
+        print(f"Folder {directory} does not exist")
 
 
 class PPRDataset(InMemoryDataset):
@@ -491,16 +496,16 @@ class HammingDistanceDataset(InMemoryDataset):
         G2_edge_attr = torch.zeros(num_nodes, num_nodes).to(device)
 
         print("now calculate hamming distance")
-        # 计算每两个节点的特征的海明距离，从而求出这两个节点之间边的权重，形成完全图G2
+        # The hamming distance of the features of each two nodes is calculated, and the weights of the edges between the two nodes are obtained to form a complete graph G2
         for i in range(num_nodes):
             for j in range(i + 1, num_nodes):
-                # 计算节点特征向量之间的海明距离作为权重
+                # The hamming distance between node feature vectors is calculated as the weight
 
-                hamming_dist = hamming_distance(self.G.data.x[i].int(), self.G.data.x[j].int())  # hamming计算不同的特征值所占的比例
+                hamming_dist = hamming_distance(self.G.data.x[i].int(), self.G.data.x[j].int())  # hamming calculates the proportion of different eigenvalues
                 similarity = 1 - hamming_dist
                 if similarity < 0.2:
                     similarity = 0
-                # 将权重填入权重矩阵中的对应位置（无向图是对称矩阵）
+                # Fill weights into the corresponding positions in the weight matrix (undirected graphs are symmetric matrices)
                 G2_edge_attr[i][j] = similarity
                 G2_edge_attr[j][i] = similarity
 
@@ -572,9 +577,10 @@ class G3Dataset:
         G3_edges_i = []
         G3_edges_j = []
         G3_edge_attr = []
-        for i, row in enumerate(G3_edge_attr_matrix1):  # 外循环遍历矩阵的行，其中 i 是行的索引，row 是该行的内容
-            for j in np.where(row > 0)[0]:  # 内循环遍历当前行 row 中大于0的元素，这些元素表示存在连接（边）的节点对。
-                # np.where(row > 0) 返回一个布尔掩码，表示哪些元素大于0，然后 [0] 用于提取这些元素的索引j。
+        for i, row in enumerate(G3_edge_attr_matrix1):  # The outer loop traverses the rows of the matrix, where i is the index of the row and row is the contents of the row
+            # The inner loop loops over elements greater than 0 in the current row, which represent pairs of nodes with links (edges).
+            for j in np.where(row > 0)[0]:
+                # np.where(row > 0) returns a Boolean mask indicating which elements are greater than 0, and [0] is then used to extract the index j of those elements.
                 G3_edges_i.append(i)
                 G3_edges_j.append(j)
                 G3_edge_attr.append(G3_edge_attr_matrix1[i, j])
@@ -591,7 +597,7 @@ def get_edge_attr_matrix(edge_index, num_nodes, edge_attr):
 
     for i, (u, v) in enumerate(edge_index.T):
         edge_attr_matrix[u][v] = edge_attr[i]
-        edge_attr_matrix[v][u] = edge_attr[i]  # 无向图，对称
+        edge_attr_matrix[v][u] = edge_attr[i]  # Undirected graph, symmetric
 
     return torch.tensor(edge_attr_matrix)
 
